@@ -1,4 +1,4 @@
-# Portfolio Moderno
+# Portfolio of Nicolas Grajales Hoyos
 
 This project is a modern portfolio built with the following technologies:
 
