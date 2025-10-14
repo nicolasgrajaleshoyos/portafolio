@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { type Project } from '@/types';
 import { GitHubIcon, ExternalLinkIcon } from '@/components/icons/SocialIcons';
+import profileImg1 from '/portafolio.png';
 
 const projects: Project[] = [
   {
@@ -25,7 +26,7 @@ const projects: Project[] = [
     id: 3,
     title: 'Sitio Web de Portafolio',
     description: 'Un portafolio personal y dinámico para mostrar mis proyectos y habilidades (¡esta misma página!).',
-    imageUrl: '/icons/portafolio.png',
+    imageUrl: profileImg1,
     tags: ['React', 'Tailwind CSS', 'Vite'],
     codeUrl: '#',
   },

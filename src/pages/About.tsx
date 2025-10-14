@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import profileImg from '/2.jpg';
 import { type Skill } from '@/types';
-import { ReactIcon, TypeScriptIcon, NodeJsIcon, TailwindIcon, FigmaIcon, JavaScriptIcon, NextJsIcon, HTMLIcon, CSSIcon, GitIcon } from '@/components/icons/SkillIcons';
+import { ReactIcon, TypeScriptIcon, NodeJsIcon, TailwindIcon, FigmaIcon, JavaScriptIcon, NextJsIcon, HTMLIcon, CSSIcon, GitIcon } from '@/components/Icons/SkillIcons';
 import { DiDocker, DiMongodb, DiPostgresql, DiPython } from 'react-icons/di';
 import { FaAngular, FaPython } from 'react-icons/fa';
 import { PiNotionLogo, PiNotionLogoBold } from 'react-icons/pi';
@@ -78,7 +79,7 @@ const About: React.FC = () => {
               <div className="absolute top-0 left-0 w-full h-full bg-primary/20 rounded-lg transform -rotate-6 transition-transform duration-500 group-hover:rotate-0"></div>
               <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl">
                 <img
-                  src="/icons/2.jpg"
+                  src={profileImg}
                   alt="Foto de perfil de Nicolas Grajales"
                   className="w-full h-full object-cover"
                 />
