@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { GitHubIcon, LinkedInIcon, EmailIcon } from '@/components/icons/SocialIcons';
+import { GitHubIcon, LinkedInIcon, EmailIcon } from '@/components/Icons/SocialIcons';
 
 const Contact: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);

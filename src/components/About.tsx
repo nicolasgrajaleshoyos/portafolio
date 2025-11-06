@@ -1,6 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { type Skill } from '@/types';
-import { ReactIcon, TypeScriptIcon, NodeJsIcon, TailwindIcon, FigmaIcon, JavaScriptIcon, NextJsIcon, HTMLIcon, CSSIcon, GitIcon } from '@/components/icons/SkillIcons';
+import { 
+   
+  ReactIcon, 
+    TypeScriptIcon, 
+    NodeJsIcon, 
+    TailwindIcon, 
+    FigmaIcon, 
+    JavaScriptIcon, 
+    NextJsIcon, 
+    HTMLIcon, 
+    CSSIcon, 
+    GitIcon 
+} from '@/components/Icons/SkillIcons';
 import { DiDocker, DiMongodb, DiPostgresql, DiPython } from 'react-icons/di';
 import { FaAngular, FaPython } from 'react-icons/fa';
 import { PiNotionLogo, PiNotionLogoBold } from 'react-icons/pi';
@@ -26,6 +38,9 @@ const skills: Skill[] = [
   { name: 'Docker', icon: FaDocker, className: 'text-sky-500' },
   { name: 'Mongodb', icon: SiMongodb, className: 'text-green-500' },
   { name: 'vscode', icon: BiLogoVisualStudio, className: 'text-blue-500' },
+  { name: 'Postgresql', icon: SiPostgresql, className: 'text-blue-700' },
+  { name: 'Notion', icon: PiNotionLogoBold, className: 'text-black dark:text-white' },
+  { name: 'Vue.js', icon: FaVuejs, className: 'text-green-500' },
 ];
 
 const About: React.FC = () => {

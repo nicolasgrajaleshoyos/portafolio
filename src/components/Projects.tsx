@@ -1,25 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { type Project } from '@/types';
-import { GitHubIcon, ExternalLinkIcon } from '@/components/icons/SocialIcons';
+import { GitHubIcon, ExternalLinkIcon } from '@/components/Icons/SocialIcons';
 
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Plataforma E-commerce',
-    description: 'Una plataforma de comercio electrónico completa con carrito de compras, pasarela de pago y panel de administración.',
-    imageUrl: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop',
-    tags: ['React', 'Node.js', 'Stripe', 'Tailwind CSS'],
-    liveUrl: '#',
-    codeUrl: '#',
+    title: 'DSS Comparador de Países Backend',
+    description: 'Backend del sistema de soporte a decisiones (DSS) para comparar países, proporcionando una API RESTful para gestionar y servir datos.',
+    imageUrl: 'public/icons/Comparador_de_paises_dss_backend.webp',
+    tags: ['Spring Boot', 'java', 'PostgreSQL'],
+    codeUrl: 'https://github.com/nicolasgrajaleshoyos/DSS-Comparador-de-Pa-ses-Backend',
   },
   {
     id: 2,
-    title: 'App de Gestión de Tareas',
-    description: 'Una aplicación Kanban para organizar tareas con funcionalidad de arrastrar y soltar, tableros personalizables y colaboración en equipo.',
-    imageUrl: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop',
-    tags: ['TypeScript', 'React', 'Firebase'],
-    liveUrl: '#',
-    codeUrl: '#',
+    title: 'DSS Comparador de Países Frontend',
+    description: 'Un sistema de soporte a decisiones (DSS) que permite comparar países utilizando análisis de datos y visualizaciones interactivas.',
+    imageUrl: 'public/icons/Comparador_de_paises_dss.webp',
+    tags: ['TypeScript', 'Tailwind CSS', 'JavaScript'],
+    codeUrl: 'https://github.com/nicolasgrajaleshoyos/DSS-Comparador-de-Pa-ses-Frontend',
   },
   {
     id: 3,
@@ -27,17 +25,9 @@ const projects: Project[] = [
     description: 'Un portafolio personal y dinámico para mostrar mis proyectos y habilidades (¡esta misma página!).',
     imageUrl: '/icons/portafolio.png',
     tags: ['React', 'Tailwind CSS', 'Vite'],
-    codeUrl: '#',
+    codeUrl: 'https://github.com/nicolasgrajaleshoyos/portafolio',
   },
-  {
-    id: 4,
-    title: 'Visualizador de Datos Climáticos',
-    description: 'Un dashboard interactivo que muestra datos climáticos históricos y en tiempo real utilizando D3.js para las visualizaciones.',
-    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
-    tags: ['D3.js', 'React', 'API REST'],
-    liveUrl: '#',
-    codeUrl: '#',
-  },
+
 ];
 
 const ProjectCard: React.FC<{ project: Project; isVisible: boolean; index: number }> = ({ project, isVisible, index }) => {
