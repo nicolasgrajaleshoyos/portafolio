@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { type Project } from '@/types';
-import { GitHubIcon, ExternalLinkIcon } from '@/components/Icons/SocialIcons';
+import { GitHubIcon, ExternalLinkIcon } from '@/components/Icons/SocialIcons.tsx';
 
 const projects: Project[] = [
   {

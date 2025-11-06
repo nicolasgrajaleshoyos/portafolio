@@ -1,5 +1,6 @@
 import React from 'react';
-import { GitHubIcon, LinkedInIcon, EmailIcon } from '@/components/Icons/SocialIcons';
+import { GitHubIcon, ExternalLinkIcon,LinkedInIcon } from '@/components/Icons/SocialIcons.tsx';
+
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
