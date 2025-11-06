@@ -51,13 +51,19 @@ const Contact: React.FC = () => {
           <a href="https://www.linkedin.com/in/nicolas-grajales-hoyos-12182a353/" target="_blank" rel="noopener noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-all duration-300 transform hover:scale-125 hover:-translate-y-1">
             <LinkedInIcon className="h-9 w-9" />
           </a>
-          <a href="nicolasgrajaleshoyos@gmail.com" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-all duration-300 transform hover:scale-125 hover:-translate-y-1">
+          <a href="https://mail.google.com/mail/u/0/?hl=es#inbox?compose=new" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-all duration-300 transform hover:scale-125 hover:-translate-y-1">
             <EmailIcon className="h-9 w-9" />
           </a>
         </div>
-        <a href="nicolasgrajaleshoyos@gmail.com" className="inline-block bg-primary text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-primary-hover transform hover:-translate-y-1 transition-all duration-300 text-lg">
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=nicolasgrajaleshoyos@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-primary text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-primary-hover transform hover:-translate-y-1 transition-all duration-300 text-lg"
+        >
           Envíame un Email
         </a>
+
       </div>
     </section>
   );
