@@ -16,7 +16,7 @@ const projects: Project[] = [
     id: 2,
     title: 'DSS Comparador de Países Frontend',
     description: 'Un sistema de soporte a decisiones (DSS) que permite comparar países utilizando análisis de datos y visualizaciones interactivas.',
-    imageUrl: '/icons/frontend.webp', 
+    imageUrl: '/icons/frontend.webp',
     tags: ['TypeScript', 'Tailwind CSS', 'JavaScript'],
     codeUrl: 'https://github.com/nicolasgrajaleshoyos/DSS-Comparador-de-Pa-ses-Frontend',
   },
@@ -28,6 +28,14 @@ const projects: Project[] = [
     tags: ['React', 'Tailwind CSS', 'Vite'],
     codeUrl: 'https://github.com/nicolasgrajaleshoyos/portafolio',
   },
+  {
+    id: 4,
+    title: 'Sistema para Empresa de Arepas',
+    description: 'Proyecto desarrollado para una empresa familiar productora de arepas en Popayán, diseñado para optimizar sus procesos.',
+    imageUrl: '/icons/arepas.png',
+    tags: ['Laravel', 'Laravel Native', 'App de Escritorio'],
+    codeUrl: 'https://github.com/nicolasgrajaleshoyos/arpas_el_buen_sabor',
+  },
 ];
 
 
@@ -37,9 +45,8 @@ const ProjectCard: React.FC<{ project: Project; isVisible: boolean; index: numbe
   return (
     <div
       style={{ transitionDelay: `${index * 150}ms` }}
-      className={`bg-white dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden group transition-all duration-700 ease-out hover:shadow-2xl hover:!opacity-100 ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-      }`}
+      className={`bg-white dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden group transition-all duration-700 ease-out hover:shadow-2xl hover:!opacity-100 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
     >
       <div className="relative overflow-hidden">
         {/* 🖼 Imagen con efecto de carga */}
@@ -48,9 +55,8 @@ const ProjectCard: React.FC<{ project: Project; isVisible: boolean; index: numbe
           src={project.imageUrl}
           alt={project.title}
           onLoad={() => setLoaded(true)}
-          className={`w-full h-56 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 ${
-            loaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`w-full h-56 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 ${loaded ? 'opacity-100' : 'opacity-0'
+            }`}
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
