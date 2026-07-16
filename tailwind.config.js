@@ -48,7 +48,20 @@ export default {
           '50%': { transform: 'translateY(-10px)' },
         }
       }
-    }
+    },
+    plugins: [
+      function ({ addUtilities }) {
+        addUtilities({
+          '.scrollbar-hide': {
+            '-ms-overflow-style': 'none',
+            'scrollbar-width': 'none',
+          },
+          '.scrollbar-hide::-webkit-scrollbar': {
+            display: 'none',
+          },
+        });
+      },
+    ],
   },
   plugins: [],
 }

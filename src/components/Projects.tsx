@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { type Project } from '@/types';
 import { GitHubIcon, ExternalLinkIcon } from '@/components/Icons/SocialIcons.tsx';
+import Reveal from '@/components/Reveal';
 
 
 const projects: Project[] = [
@@ -39,14 +40,12 @@ const projects: Project[] = [
 ];
 
 
-const ProjectCard: React.FC<{ project: Project; isVisible: boolean; index: number }> = ({ project, isVisible, index }) => {
+const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
     <div
-      style={{ transitionDelay: `${index * 150}ms` }}
-      className={`bg-white dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden group transition-all duration-700 ease-out hover:shadow-2xl hover:!opacity-100 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        }`}
+      className="bg-white dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden group transition-shadow duration-300 hover:shadow-2xl"
     >
       <div className="relative overflow-hidden">
         {/* 🖼 Imagen con efecto de carga */}
@@ -107,27 +106,8 @@ const ProjectCard: React.FC<{ project: Project; isVisible: boolean; index: numbe
 
 // 🧱 Componente principal de proyectos
 const Projects: React.FC = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const currentRef = sectionRef.current;
-    if (currentRef) observer.observe(currentRef);
-    return () => currentRef && observer.unobserve(currentRef);
-  }, []);
-
   return (
-    <section id="projects" ref={sectionRef} className="py-20 bg-slate-50 dark:bg-dark">
+    <section id="projects" className="py-20 bg-slate-50 dark:bg-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-dark dark:text-light">Mis Proyectos</h2>
@@ -138,7 +118,9 @@ const Projects: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} isVisible={isVisible} index={index} />
+            <Reveal key={project.id} delay={index * 120}>
+              <ProjectCard project={project} />
+            </Reveal>
           ))}
         </div>
       </div>

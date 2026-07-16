@@ -73,6 +73,8 @@ const Hero: React.FC = () => {
       }`}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 via-white to-blue-100 dark:from-slate-900 dark:via-dark dark:to-slate-800 bg-[length:200%_200%] animate-gradient-shift"></div>
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-2xl animate-float motion-reduce:animate-none"></div>
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-500/20 rounded-full blur-2xl animate-float motion-reduce:animate-none" style={{ animationDelay: '-3s' }}></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           
